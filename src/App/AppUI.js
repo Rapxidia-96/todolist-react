@@ -6,6 +6,8 @@ import { TodoList } from '../TodoList';
 import { TodoItem } from '../TodoItem';
 import { CreateTodoButton } from '../CreateTodoButton';
 import { Modal } from '../Modal';
+import {TodoForm} from'../TodoForm';
+
  function AppUI() {
      const {
         error,
@@ -37,7 +39,7 @@ import { Modal } from '../Modal';
                 </TodoList>
                 {!!openModal &&(
                     <Modal>
-                        <p>hola</p>
+                        <TodoForm/>
                     </Modal>
                 )}
                 

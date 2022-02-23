@@ -32,6 +32,16 @@ const TodoContext =  React.createContext();
     })
   }
 
+  const addTodo =(text) =>{
+    // investigar que es spread operator (...)
+    const newTodos = [...todos];
+    newTodos.push({
+      completed: false,
+      text,
+    });
+    saveTodos(newTodos);
+  }
+
   
   const completeTodo =(text) =>{
     const todoIndex = todos.findIndex(todo => todo.text ===text);
@@ -57,6 +67,7 @@ const TodoContext =  React.createContext();
           searchValue,
           setSearchValue,
           searchedTodos,
+          addTodo,
           completeTodo,
           deleteTodo,
           openModal,
